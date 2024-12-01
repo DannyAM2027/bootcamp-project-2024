@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
+
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blogs</a>
-    </nav>
-    <div id="blog-container">
-        <!--here is the ts stuff-->
+
+    <header>
+        <a href="index.html" class="logo">Daniel Miranda</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="blog.html" class="active">Blogs</a>
+        </nav>
+    </header>
+
+    <div class="blog-page-title">
+        <h1>Hey, it's my <span>Blog!</span></h1>
     </div>
+    
+
+    <section class="blog-page">
+        <div id="blog-container" class="blogs">
+            <!--here is the ts stuff-->
+        </div>
+    </section>
+
 </body>
 <script src="./src/blog.js"></script>
 </html>

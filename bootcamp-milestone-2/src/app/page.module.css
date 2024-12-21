@@ -1,0 +1,141 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content p{
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.spanName{
+    color: rgb(83, 139, 87);
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 140vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgb(83, 139, 87); 
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(83, 139, 87);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: seagreen;
+}
+
+.social-icons a:hover{
+    color: seashell;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(83, 139, 87);
+    box-shadow: 0 0 25px rgb(83, 139, 87);
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Software Developer";
+    color: rgb(83, 139, 87);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid rgb(83, 139, 87);
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Software Developer";
+    }
+    21%, 40%{
+        content: "Web Designer";
+    }
+    41%, 60%{
+        content: "Developer";
+    }
+    61%, 80%{
+        content: "Student";
+    }
+    81%, 100%{
+        content: "Athlete";
+    }
+}
+@media(max-width:1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+}

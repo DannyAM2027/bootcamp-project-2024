@@ -1,0 +1,87 @@
+
+
+.header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: seagreen;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+
+
+.navLink{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navLink:hover,
+.active{
+    color: rgb(83, 139, 87);
+    border-bottom: 3px solid rgb(83, 139, 87);
+}
+
+@media(max-width:995px){
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+
+        left: 65%;
+
+
+        width: 40%;
+        border-top: 3px solid rgb(83, 139, 87);
+        border-left: 3px solid rgb(83, 139, 87);
+        border-bottom: 3px solid rgb(83, 139, 87);
+        padding: 1rem solid;
+        background-color: #161616;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+
+
+    }
+    .navLink{
+        display: block;
+    }
+
+    .navLink{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+    }
+
+    .navLink:hover,
+    .active{
+        padding: 1rem;
+        border-radius: 0.35rem;
+        border-bottom: 0.5rem solid rgb(83, 139, 87);
+        transition: 0.3s ease;
+
+    }
+
+}

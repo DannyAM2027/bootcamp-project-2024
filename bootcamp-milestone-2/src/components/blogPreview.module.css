@@ -1,0 +1,56 @@
+.blogPost {
+    height: auto;
+    width: 60%;
+    display: inline-block;
+    margin: 5rem 20% 2rem;
+    vertical-align: top;
+    text-align: center;
+    background-color: rgb(240, 241, 240);
+    box-shadow: 0 4px 8px rgba(6, 6, 6, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.blogTitle {
+    font-size: 2rem;
+    color: #333;
+    border-top: transparent #333;
+    border-bottom: solid #333;
+    margin-bottom: 2rem;
+}
+
+.blogImage {
+    display: block;
+    width: 50%;
+    margin: auto;
+    height: 25%;
+    margin-bottom: 1rem;
+}
+
+.blogDescription {
+    font-size: 1.5rem;
+    color: #333;
+    border-top: solid #333;
+    margin-bottom: 1rem;
+}
+
+.blogLink {
+    display: block;
+    margin: 0 100px 0 100px;
+    background-color: #4CAF50;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blogLink:hover {
+    background-color: rgb(83, 139, 87);
+    color: white;
+}

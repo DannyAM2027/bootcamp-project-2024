@@ -1,0 +1,146 @@
+/* need the title */
+.summary {
+    font-weight: 900;
+    font-style: italic;
+  }
+
+
+.resumeTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 20rem auto 1rem;
+    text-align: center;
+    width: 29%; 
+    height: 14%;
+    border-bottom: solid rgb(83, 139, 87);
+    color: rgb(255, 255, 255);
+}
+
+.resumeTitle span{
+    color: rgb(83, 139, 87);
+}
+
+.resumeLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 550;
+    margin: 6rem auto 4rem;
+    border-radius: 2rem;
+    background-color: rgb(83, 139, 87);
+    width: 20%; 
+    height: 34px;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+.resumeLink:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 25px rgb(83, 139, 87);
+}
+
+
+
+.resumeInfo {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 10rem auto 0; 
+    padding: 50px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    min-height: 100; 
+}
+
+.resumeInfo .sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.resumeInfo p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.resumeInfo .entry {
+    margin-bottom: 2rem;
+}
+
+.resumeInfo .entryTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.resumeInfo .entryInfo {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.resumeInfo .entryDescription {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.resumeInfo .skillList {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.resumeInfo .skillList li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+@media screen and (max-width: 995px) {
+    .resumeTitle{
+        width: 70%;
+        height: 12%;
+    }
+    .resumeLink{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        font-weight: 550;
+        margin: 6rem auto 4rem;
+        border-radius: 2rem;
+        width: 40%; 
+        height: 34px;
+
+        color: #333;
+    }
+    .resumeInfo {
+        padding: 1rem;
+    }
+    
+    .resumeInfo .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .resumeInfo .entryTitle {
+        font-size: 1.2rem;
+    }
+
+    .resumeInfo .skillList {
+        font-size: 0.9rem;
+    }
+}

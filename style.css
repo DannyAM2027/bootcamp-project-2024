@@ -96,7 +96,7 @@ nav a.active{
     nav a:hover,
     nav a.active{
         padding: 1rem;
-        border-radius: 0.5rem;
+        border-radius: 0.35rem;
         border-bottom: 0.5rem solid rgb(83, 139, 87);
 
     }
@@ -185,9 +185,36 @@ section {
     color: white;
 }
 
-.blog-post1,
-.blog-post2{
-    color: red;
+
+
+
+
+.blog-page{
+    color: #333;
+    display: block;
+    text-align: center;
+    margin: 10rem 0 5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgb(240, 241, 240);
+}
+
+.blog-page h1{
+    font-size: large;
+}
+
+.blog-page img{
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    height: 25%;
+    margin-bottom: 1rem;
 }
 
 
+.blog-page .blog-story{
+    margin: 0 2rem 0;
+    font-size: 1.9cap;
+    color: #555;
+}

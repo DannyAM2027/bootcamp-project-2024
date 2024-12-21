@@ -12,7 +12,7 @@ type Blog = {
       title: "Painful Lesson!",
       date: "2024-10-15",
       description: "The Time I Realized I Need Basketball Shoes!",
-      image: "basketball.png",
+      image: "bootcamp-milestone-2/public/basketball.png",
       imageAlt: "An image of blog 1",
       slug: "my-first-blog" //change this to the titles
     },
@@ -20,7 +20,7 @@ type Blog = {
       title: "Definitely Not A Chef!",
       date: "2024-10-18",
       description: "The Time I Made The Worst Pasta!",
-      image: "spaghetti.png",
+      image: "bootcamp-milestone-2/public/spaghetti.png",
       imageAlt: "An image of blog 2",
       slug: "another-blog-post" 
     }

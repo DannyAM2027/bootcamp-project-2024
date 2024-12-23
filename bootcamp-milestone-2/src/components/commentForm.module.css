@@ -1,0 +1,86 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.label {
+    color: #333;
+    font: icon;
+    font-weight: 450;
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    color: rgb(28, 77, 49);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Focus states for inputs and textarea */
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: seagreen;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+    background-color: white;
+}
+
+.textarea {
+    min-height: 100px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: seagreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background-color: #2e8b57d8;
+    transform: translateY(-1px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Optional: Add a subtle hover effect to inputs */
+.input:hover,
+.textarea:hover {
+    border-color: #999;
+}
+
+/* Disabled state for button */
+.button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}

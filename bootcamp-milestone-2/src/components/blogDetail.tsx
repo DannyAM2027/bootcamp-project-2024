@@ -1,5 +1,10 @@
-import React from "react";
+
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
+import Comment from "./comment";
+import CommentForm from "./commentForm";
 import styles from "./blogDetail.module.css";
 
 type BlogDetailProps = {
@@ -8,7 +13,9 @@ type BlogDetailProps = {
   description: string;
   image: string;
   imageAlt: string;
-  blogStory: String;
+  comments: { user: string; comment: string; time: Date }[];
+  blogStory: string;
+  slug: string; // Add slug to props
 };
 
 export default function BlogDetail({
@@ -17,11 +24,23 @@ export default function BlogDetail({
   description,
   image,
   imageAlt,
+  comments: initialComments,
   blogStory,
-
+  slug, // Accept slug as a prop
 }: BlogDetailProps) {
+  const [comments, setComments] = useState(initialComments);
+
+  const handleNewComment = (newComment: {
+    user: string;
+    comment: string;
+    time: Date;
+  }) => {
+    setComments((prev) => [...prev, newComment]);
+  };
+
   return (
-    <>
+    <div >
+      {/* Blog Content */}
       <main>
           <article className={styles.blogPost}>
             <h1 className={styles.title}>{title}</h1>
@@ -32,7 +51,19 @@ export default function BlogDetail({
           </article>
       </main>
 
-      {/* <Footer /> */}
-    </>
+      {/* Comments Section */}
+      <div className={styles.commentsSection}>
+        <h2>Comments</h2>
+        {comments.length > 0 ? (
+          comments.map((comment, index) => (
+            <Comment key={index} comment={comment} />
+          ))
+        ) : (
+          <p>No comments yet. Be the first to comment!</p>
+        )}
+        {/* Add type explicitly */}
+        <CommentForm slug={slug} type="blog" onCommentAdded={handleNewComment} />
+      </div>
+    </div>
   );
 }

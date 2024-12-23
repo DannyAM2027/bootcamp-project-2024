@@ -1,0 +1,43 @@
+.commentContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa; 
+    border: 1.8px rgb(88, 129, 107);
+    border-style: solid;
+    border-radius: 8px;
+  }
+  
+  .userImage {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid seagreen; 
+  }
+  
+  .commentContent {
+    flex: 1; 
+  }
+  
+  .userName {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #334;
+  }
+  
+  .commentText {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333; 
+  }
+  
+  .commentTime {
+    font-size: 12px;
+    color: #666;
+  }
+  

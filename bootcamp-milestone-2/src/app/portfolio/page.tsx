@@ -4,6 +4,15 @@ import connectDB from "@/database/db";
 import styles from "./page.module.css";
 import Portfolio from "@/database/portfolioSchema";
 
+interface Portfolio {
+  key: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  slug: string;
+}
+
 async function getPortfolios() {
   await connectDB(); // Connect to the database
   try {
@@ -39,13 +48,12 @@ export default async function PortfolioPage() {
         </div>
         
         <section>
-          {portfolios.map((portfolio) => (
+          {portfolios.map((portfolio: Portfolio) => (
             <PortfolioPreview
-              key={portfolio.slug}
+              key={portfolio.key}
               title={portfolio.title}
               description={portfolio.description}
               image={portfolio.image}
-              imageAlt={portfolio.image_alt}
               slug={portfolio.slug}
             />
           ))}

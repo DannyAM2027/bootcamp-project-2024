@@ -1,24 +1,22 @@
+/* blogDetail.module.css */
 .blogPost {
     margin: 10rem 22% 2rem;
     max-width: 800px;
     text-align: left;
-    background-color: #f9f9f9;
+    background-color: rgb(240, 241, 240);
     border-radius: 8px;
     vertical-align: top;
-    background-color: rgb(240, 241, 240);
     box-shadow: 0 4px 8px rgba(6, 6, 6, 0.1);
     padding: 15px;
     height: auto;
     display: inline-block;
-
 }
-
-
 
 .title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #333;
+    text-align: center;
 }
 
 .image {
@@ -33,26 +31,58 @@
     font-size: 1rem;
     color: #888;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .description {
     font-size: 1.5rem;
     color: #555;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .blogStory {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #333;
+    text-align: center;
 }
 
+/* New styles for comments section */
+.commentsSection {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgb(240, 241, 240);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-@media(max-width:995px){
-    .blogPost{
+.commentsSection h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    font-weight: 900;
+}
+
+.commentsSection > p {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+@media(max-width:995px) {
+    .blogPost {
         width: 60%;
         margin: 10rem 20% 2rem;
-    } 
+    }
 
-
+    .commentsSection {
+        width: 80%;
+        padding: 1rem;
+    }
 }

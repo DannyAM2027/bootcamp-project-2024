@@ -23,3 +23,4 @@ export async function GET(req: NextRequest, { params }: IParams) {
     return NextResponse.json("Portfolio not found.", { status: 404 });
   }
 }
+

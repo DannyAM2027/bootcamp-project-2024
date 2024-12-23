@@ -1,58 +1,48 @@
-.blogPost {
-    margin: 10rem 22% 2rem;
+/*blog css for slug page*/
+
+.container {
     max-width: 800px;
-    text-align: left;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    vertical-align: top;
-    background-color: rgb(240, 241, 240);
-    box-shadow: 0 4px 8px rgba(6, 6, 6, 0.1);
-    padding: 15px;
-    height: auto;
-    display: inline-block;
-
-}
-
-
-
-.title {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .date {
+    color: gray;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .image {
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  
+  .commentsSection {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .commentsTitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     color: #333;
-}
-
-.image {
-    display: block;
-    width: 50%;
-    margin: auto;
-    height: 25%;
-    margin-bottom: 1rem;
-}
-
-.date {
+  }
+  
+  .noComments {
     font-size: 1rem;
     color: #888;
-    margin-bottom: 1rem;
-}
-
-.description {
-    font-size: 1.5rem;
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-.blogStory {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #333;
-}
-
-
-@media(max-width:995px){
-    .blogPost{
-        width: 60%;
-        margin: 10rem 20% 2rem;
-    } 
-
-
-}
+    font-style: italic;
+  }
+  /* maybe not */

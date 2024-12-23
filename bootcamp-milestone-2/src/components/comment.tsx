@@ -1,28 +1,39 @@
 import React from "react";
-import type { IComment } from "@/database/blogSchema";
+import styles from "./comment.module.css";
 
 type CommentProps = {
-    comment?: { user?: string; comment?: string; time?: string };
+  comment: {
+    user: string;
+    comment: string;
+    time: Date;
   };
-  
-  export default function Comment({ comment }: CommentProps) {
-    if (!comment) {
-      return <div>Error: Comment data is missing!</div>;
-    }
-  
-    const { user = "Anonymous", comment: content = "No comment provided", time } = comment;
-  
-    const parseCommentTime = (time: string | undefined) => {
-      return time ? new Date(time).toLocaleString() : "Unknown time";
-    };
-  
-    return (
-      <div>
-        <h4>{user}</h4>
-        <p>{content}</p>
-        <span>{parseCommentTime(time)}</span>
-      </div>
+};
+
+// Function to parse the Date object into a readable format
+function parseCommentTime(time: Date) {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+  return new Date(time).toLocaleString("en-US", options);
+}
+
+// Comment Component
+function Comment({ comment }: CommentProps) {
+return (
+    <div className={styles.commentContainer}>
+        <img src="/images/userpfp.jpg" alt="User Profile" className={styles.userImage} />
+        <div className={styles.commentContent}>
+        <h4 className={styles.userName}>{comment.user}</h4>
+        <p className={styles.commentText}>{comment.comment}</p>
+        <span className={styles.commentTime}>{parseCommentTime(comment.time)}</span>
+        </div>
+    </div>
     );
-  }
-  
-  
+}
+
+export default Comment;

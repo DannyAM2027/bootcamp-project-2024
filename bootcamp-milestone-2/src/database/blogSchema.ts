@@ -1,5 +1,12 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
 
+
+export interface IComment {
+  user: string;
+  comment: string;
+  time: Date;
+}
+
 // Define the TypeScript interface for the Blog document
 export interface IBlog extends Document {
   title: string;
@@ -9,18 +16,27 @@ export interface IBlog extends Document {
   content: string;
   image: string;
   image_alt: string;
+  comments?: IComment[]; // Optional field
 }
+
+
+const commentSchema = new Schema<IComment>({
+  user: { type: String, required: true },
+  comment: { type: String, required: true },
+  time: { type: Date, default: () => new Date() }, // Generate a new date for each comment
+});
 
 // Define the Blog schema
 const blogSchema = new Schema<IBlog>(
   {
     title: { type: String, required: true },
     slug: { type: String, required: true, unique: true }, // Ensure slug is unique
-    date: { type: Date, default: () => new Date() }, // Use a function for the default date
+    date: { type: Date, default: () => new Date() }, 
     description: { type: String, required: true },
     image: { type: String, required: true },
     image_alt: { type: String, required: true },
     content: { type: String, required: true },
+    comments: [{ type: commentSchema}],
   },
   { collection: "blogs" } // Explicitly set the collection name
 );

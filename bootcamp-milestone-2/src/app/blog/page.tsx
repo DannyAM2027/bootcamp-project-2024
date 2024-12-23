@@ -1,5 +1,6 @@
 import BlogPreview from "@/components/blogPreview";
 import Footer from "@/components/footer";
+import Comment from "@/components/comment"
 import connectDB from "@/database/db";
 import Blog from "@/database/blogSchema";
 import styles from "./page.module.css";
@@ -39,7 +40,7 @@ export default async function BlogPage() {
         </div>
         
         <section>
-          {blogs.map((blog) => (
+          {blogs.map((blog: { slug: any; title: any; date: string | number | Date; description: any; image: any; image_alt: any; }) => (
             <BlogPreview
               key={blog.slug}
               title={blog.title}
@@ -56,3 +57,17 @@ export default async function BlogPage() {
     </>
   );
 }
+
+/* <section>
+          {blogs.map((blog) => (
+            <BlogPreview
+              key={blog.slug}
+              title={blog.title}
+              date={new Date(blog.date).toLocaleDateString()}
+              description={blog.description}
+              image={blog.image}
+              imageAlt={blog.image_alt}
+              slug={blog.slug}
+            />
+          ))}
+        </section> */

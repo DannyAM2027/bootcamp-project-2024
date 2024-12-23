@@ -43,7 +43,6 @@ export default async function PortfolioPage() {
             <PortfolioPreview
               key={portfolio.slug}
               title={portfolio.title}
-              date={new Date(portfolio.date).toLocaleDateString()}
               description={portfolio.description}
               image={portfolio.image}
               imageAlt={portfolio.image_alt}
@@ -56,3 +55,5 @@ export default async function PortfolioPage() {
     </>
   );
 }
+
+

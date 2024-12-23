@@ -11,6 +11,7 @@ export default function Navbar() {
         <Link href="/" className={styles.navLink}>Home</Link>
         <Link href="/blog" className={`${styles.navLink}`}>
           Blogs</Link>
+          <Link href="/portfolio" className={styles.navLink}>Portfolio</Link>
           <Link href="/resume" className={styles.navLink}>Resume</Link>
         <Link href="/about" className={styles.navLink}>Contact Me</Link>
 

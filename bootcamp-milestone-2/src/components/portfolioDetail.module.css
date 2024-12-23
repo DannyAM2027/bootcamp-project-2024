@@ -1,0 +1,49 @@
+.portfolioPost {
+    margin: 10rem 22% 2rem;
+    max-width: 800px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    vertical-align: top;
+    background-color: rgb(240, 241, 240);
+    box-shadow: 0 4px 8px rgba(6, 6, 6, 0.1);
+    padding: 15px;
+    height: auto;
+    display: inline-block;
+
+}
+
+
+
+.portfolioTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.Image {
+    display: block;
+    width: 50%;
+    margin: auto;
+    height: 25%;
+    margin-bottom: 1rem;
+}
+
+
+
+.portfolioDescription {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+
+
+@media(max-width:995px){
+    .portfolioPost{
+        width: 60%;
+        margin: 10rem 20% 2rem;
+    } 
+
+
+}

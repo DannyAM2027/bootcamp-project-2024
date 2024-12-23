@@ -22,7 +22,7 @@ export default function Home() {
         <Navbar />
         <section className={styles.home}>
           <div className={styles["home-img"]}>
-            <Image src="/myself.JPEG" alt="Daniel Miranda" width={500} height={500} />
+            <Image src="/myself.JPEG" alt="Daniel Miranda" width={500} height={500} /> {/* fix image */}
           </div>
           <div className={styles["home-content"]}>
             <h1>

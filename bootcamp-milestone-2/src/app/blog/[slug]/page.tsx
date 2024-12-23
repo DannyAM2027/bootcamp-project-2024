@@ -1,29 +1,44 @@
-import { notFound } from "next/navigation"; // For 404 handling
-import blogs from "@/static/blogData"; // Import the blog data
-import styles from "./page.module.css";
-import Footer from "@/components/footer";
+import { notFound } from "next/navigation";
+import connectDB from "@/database/db";
+import Blog from "@/database/blogSchema"; // Import Blog model
+import BlogDetail from "@/components/blogDetail";
+import BlogPreview from "@/components/blogPreview";
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const blog = blogs.find((blog) => blog.slug === params.slug);
+// Fetch a single blog by slug
+async function getSingleBlog(slug: string) {
+  await connectDB(); // Ensure database connection
+
+  try {
+    const blog = await Blog.findOne({ slug }).orFail(); // Find a single blog by slug
+    return JSON.parse(JSON.stringify(blog)); // Convert Mongoose document to plain object
+  } catch (err) {
+    console.error(`Error fetching blog with slug "${slug}":`, err);
+    return null; // Return null if the blog is not found or an error occurs
+  }
+}
+
+
+export default async function BlogPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const blog = await getSingleBlog(params.slug); 
 
   if (!blog) {
-    notFound(); // Return a 404 page if the blog isn't found
+    notFound(); 
   }
 
   return (
-    <>
-      <main>
-          <article className={styles.blogPost}>
-            <h1 className={styles.title}>{blog.title}</h1>
-            <img src={`/images/${blog.image}`} alt={blog.imageAlt} className={styles.image} />
-            <p className={styles.date}>Published on: {blog.date}</p>
-            <p className={styles.description}><strong>{blog.description}</strong></p>
-            <p className={styles.blogStory}>{blog.blogStory}</p>
-          </article>
-      </main>
 
-      {/* <Footer /> */}
-    </>
+    <BlogDetail
+    title={blog.title}
+    date={new Date(blog.date).toLocaleDateString()}
+    description={blog.description}
+    image={blog.image}
+    imageAlt={blog.imageAlt}
+    blogStory={blog.blogStory}
+  />
 
   );
 }

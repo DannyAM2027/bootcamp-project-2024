@@ -1,0 +1,17 @@
+.portfolioPageTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 20rem auto 1rem;
+    text-align: center;
+    width: 29%; 
+    height: 14%;
+    border-bottom: solid rgb(83, 139, 87);
+    color: rgb(255, 255, 255);
+}
+
+.portfolioPageTitle span{
+    color: rgb(83, 139, 87);
+}
+

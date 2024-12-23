@@ -20,7 +20,6 @@ export default function Contact() {
     e.preventDefault();
     setStatus({ success: false, error: false, loading: true });
 
-    // Invalid data
     if (!formData.name || !formData.email || !formData.message) {
       setStatus({ success: false, error: true, loading: false });
       return;
@@ -28,15 +27,15 @@ export default function Contact() {
 
     try {
       const result = await emailjs.send(
-        "service_mgmdgvh", // EmailJS Service ID
-        "template_kq0oisn", // EmailJS Template ID
+        "service_51zn4s9", // EmailJS Service ID
+        "template_79jt7qb", // EmailJS Template ID
         {
           from_name: formData.name, // Matches the template {{from_name}}
-          to_name: "Daniel",       // Matches the template {{to_name}}
+          to_name: "Daniel Miranda",       // Matches the template {{to_name}}
           message: formData.message, // Matches the template {{message}}
           reply_to: formData.email,  // Matches the template {{reply_to}}
         },
-        "ylu8vyrNKWL6vA0pY" // EmailJS Public Key
+        "qNzgSsS7w3uKWFdEZ" // EmailJS Public Key
       );
 
       if (result.status === 200) {

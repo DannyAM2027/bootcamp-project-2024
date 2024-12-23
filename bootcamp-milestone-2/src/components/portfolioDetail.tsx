@@ -32,7 +32,7 @@ export default function PortfolioDetail({
   };
 
   return (
-    <div className={styles.container}>
+    <div >
       <main>
           <article className={styles.portfolioPost}>
           <img src={`/images/${image}`} alt={imageAlt} className={styles.image} />

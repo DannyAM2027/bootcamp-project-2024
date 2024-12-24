@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Comment from "./comment";
 import CommentForm from "./commentForm";
 import styles from "./portfolioDetail.module.css";

@@ -30,7 +30,7 @@ export default function Home() {
               I&apos;m a <span></span>
             </h3>
             <p>
-              I'm a dedicated software developer focused on backend development
+              I&apos;m a dedicated software developer focused on backend development
               and embedded systems, currently pursuing a Computer Science degree
               @ Cal Poly SLO, graduating in June 2027. I&apos;ve worked on projects
               ranging from web development to embedded systems and thrive in solving

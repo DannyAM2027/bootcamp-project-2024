@@ -1,22 +1,16 @@
 import { notFound } from "next/navigation";
 import BlogDetail from "@/components/blogDetail";
+import connectDB from "@/database/db";
+import Blog from "@/database/blogSchema";
 
 async function getSingleBlog(slug: string) {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    const res = await fetch(`${baseUrl}/api/Blogs/${slug}`, {
-      cache: "no-store",
-    });
-    //"http://localhost:3000/api/Blogs/${slug}"
-
-    if (!res.ok) {
-      throw new Error(`Failed to fetch blog with slug: ${slug}`);
-    }
-
-    return res.json();
+    await connectDB();
+    const blog = await Blog.findOne({ slug }).orFail();
+    return JSON.parse(JSON.stringify(blog)); // Convert Mongoose document to plain object
   } catch (err) {
     console.error(`Error fetching blog: ${err}`);
-    return null; 
+    return null;
   }
 }
 

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+//import Head from 'next/head';
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import styles from "./page.module.css";
@@ -8,19 +8,17 @@ import Footer from '@/components/footer';
 export default function Home() {
   return (
     <>
-      <Head>
         <script
           src="https://kit.fontawesome.com/ceaaa19e99.js"
           crossOrigin="anonymous"
           async
-        ></script>
-      </Head> {/* fix this here */}
+        ></script>{/* fix this here */}
 
       <main className={styles.body}>
         <Navbar />
         <section className={styles.home}>
           <div className={styles["home-img"]}>
-            <Image src="/myself.JPEG" alt="Daniel Miranda" width={500} height={500} /> {/* fix image */}
+            <Image src="/images/myself.JPEG" alt="Daniel Miranda" width={500} height={500} /> {/* fix image */}
           </div>
           <div className={styles["home-content"]}>
             {<h1>

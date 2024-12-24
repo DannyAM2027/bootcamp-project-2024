@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./portfolioPreview.module.css";
-import Portfolio from "@/database/portfolioSchema";
 import Image from "next/image";
 
 type PortfolioProps = {

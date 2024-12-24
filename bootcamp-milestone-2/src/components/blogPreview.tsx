@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { Blog } from "@/static/blogData";
 import styles from "./blogPreview.module.css";
 
-export default function BlogPreview({ title, description, image, date, slug }: Blog) {
+export default function BlogPreview({ title, description, image, slug }: Blog) {
   return (
     <div className={styles.blogPost}>
       <h3 className={styles.blogTitle}>{title}</h3>

@@ -21,7 +21,7 @@ export default function CommentForm({ slug, type, onCommentAdded }: CommentFormP
     setLoading(true);
 
     try {
-      // Dynamically determine the API endpoint based on the type, blog or project ? 
+      // Dynamically determine the API endpoint based on the type, blog or portfolio ? 
       const apiPath = type === "blog" ? `/api/Blogs/${slug}/comment` : `/api/Portfolio/${slug}/comment`;
 
       const res = await fetch(apiPath, {

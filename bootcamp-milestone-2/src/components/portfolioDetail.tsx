@@ -12,7 +12,7 @@ type PortfolioDetailProps = {
   description: string;
   image: string;
   imageAlt: string;
-  portfolioStory: String;
+  portfolioStory: string;
   comments: { user: string; comment: string; time: Date }[]; // Add comments prop
 };
 

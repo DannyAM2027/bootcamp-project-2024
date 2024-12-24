@@ -4,9 +4,10 @@ import BlogDetail from "@/components/blogDetail";
 async function getSingleBlog(slug: string) {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    const res = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
+    const res = await fetch(`${baseUrl}/api/Blogs/${slug}`, {
       cache: "no-store",
     });
+    //"http://localhost:3000/api/Blogs/${slug}"
 
     if (!res.ok) {
       throw new Error(`Failed to fetch blog with slug: ${slug}`);

@@ -19,7 +19,7 @@ export async function GET(req: NextRequest, { params }: IParams) {
 
     return NextResponse.json(portfolio);
   } catch (err) {
-    // Return a 404 response if the blog is not found
+    console.log(err)
     return NextResponse.json("Portfolio not found.", { status: 404 });
   }
 }

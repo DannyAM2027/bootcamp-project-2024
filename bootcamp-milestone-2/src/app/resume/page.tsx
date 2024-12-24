@@ -78,7 +78,7 @@ export default function Resume() {
 
           <div className={styles.entry}>
             <h3 className={styles.entryTitle}>Front-End Software Engineer</h3>
-            <p className={styles.entryInfo}>Abuelita's Kitchen, 2020-2021</p>
+            <p className={styles.entryInfo}>Abuelita&apos;s Kitchen, 2020-2021</p>
             <p className={styles.entryDescription}>
               Created a multi-page cooking and recipe website focusing on
               user-friendly navigation and visual appeal. Featured a collection

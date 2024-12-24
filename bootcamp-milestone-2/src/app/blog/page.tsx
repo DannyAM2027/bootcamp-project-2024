@@ -35,7 +35,7 @@ export default async function BlogListPage() {
     return (
       <main className={styles.container}>
         <div className={styles.title}>
-          <h1>Hey It's My <span>Blog</span>!</h1>
+          <h1>Hey It&apos;s My <span>Blog</span>!</h1>
         </div>
         <p>No blog posts available. Please check back later.</p>
       </main>
@@ -46,7 +46,7 @@ export default async function BlogListPage() {
   return (
     <main className={styles.container}>
       <div className={styles.title}>
-       <h1 >Hey It's My <span>Blog</span>!</h1>
+       <h1 >Hey It&apos;s My <span>Blog</span>!</h1>
       </div>
       <div className={styles.blogList}>
         {blogs.map((blog: Blog) => (

@@ -1,9 +1,7 @@
 import Head from 'next/head';
 import Image from "next/image";
 import Navbar from "@/components/navbar";
-import BlogPreview from "@/components/blogPreview";
 import styles from "./page.module.css";
-import blogs from "@/static/blogData";
 
 import Footer from '@/components/footer';
 
@@ -25,18 +23,18 @@ export default function Home() {
             <Image src="/myself.JPEG" alt="Daniel Miranda" width={500} height={500} /> {/* fix image */}
           </div>
           <div className={styles["home-content"]}>
-            <h1>
-              Hi, it's <span className={styles["spanName"]}>Daniel</span>
-            </h1>
+            {<h1>
+              Hi, it&apos;s <span className={styles["spanName"]}>Daniel</span>
+            </h1>}
             <h3 className={styles["typing-text"]}>
-              I'm a <span></span>
+              I&apos;m a <span></span>
             </h3>
             <p>
               I'm a dedicated software developer focused on backend development
               and embedded systems, currently pursuing a Computer Science degree
-              @ Cal Poly SLO, graduating in June 2027. I’ve worked on projects
+              @ Cal Poly SLO, graduating in June 2027. I&apos;ve worked on projects
               ranging from web development to embedded systems and thrive in solving
-              complex problems with efficient code. I’m always eager to learn and grow
+              complex problems with efficient code. I&apos;m always eager to learn and grow
               through new challenges.
             </p>
             <div className={styles["social-icons"]}>

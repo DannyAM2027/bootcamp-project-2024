@@ -17,11 +17,7 @@ export async function GET(req: NextRequest, props: IParams) {
     // Find the blog by slug in the database
     const blog = await blogSchema.findOne({ slug }).orFail();
 
-    // // Format the date to match the "MM/dd/yyyy" format used in blogData.ts
-    // const formattedBlog = {
-    //   ...blog.toObject(),
-    //   date: format(new Date(blog.date), 'MM/dd/yyyy'), // Format to match blogData.ts
-    // };
+
     return NextResponse.json(blog); // Return the blog as JSON
   } catch (err) {
     console.error("Error fetching blogs:", err);

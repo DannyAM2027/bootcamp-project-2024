@@ -1,6 +1,6 @@
 //import Head from 'next/head';
 import Image from "next/image";
-import Navbar from "@/components/navbar";
+//import Navbar from "@/components/navbar";
 import styles from "./page.module.css";
 
 import Footer from '@/components/footer';
@@ -15,7 +15,7 @@ export default function Home() {
         ></script>{/* fix this here */}
 
       <main className={styles.body}>
-        <Navbar />
+        {/* <Navbar /> */}
         <section className={styles.home}>
           <div className={styles["home-img"]}>
             <Image src="/images/myself.JPEG" alt="Daniel Miranda" width={500} height={500} /> {/* fix image */}
@@ -69,7 +69,7 @@ export default function Home() {
         </section> */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

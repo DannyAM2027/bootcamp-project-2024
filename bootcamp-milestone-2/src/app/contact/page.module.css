@@ -2,8 +2,8 @@
 .pageTitle {
     font-size: 2.5rem;
     text-align: center;
-    margin: 5rem 0 3rem;
-    color: #333;
+    margin: 15rem 0 3rem;
+    color: rgb(255, 255, 255);
     position: relative;
     padding-bottom: 1rem;
 }
@@ -14,7 +14,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
+    width: 200px;
     height: 3px;
     background-color: seagreen;
 }
@@ -26,6 +26,7 @@
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    margin-bottom: 15%;
     padding: 2rem;
     background-color: #fff;
     border-radius: 10px;

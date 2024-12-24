@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-import Footer from "@/components/footer";
 
 export default function Resume() {
   return (
@@ -13,7 +12,7 @@ export default function Resume() {
       <div>
         <a
           className={styles.resumeLink}
-          href="Resume_1.4* copy.pdf"
+          href="/RESUME_copy.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -111,7 +110,7 @@ export default function Resume() {
         </section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   );

@@ -1,5 +1,5 @@
 import PortfolioPreview from "@/components/portfolioPreview";
-import Footer from "@/components/footer";
+//import Footer from "@/components/footer";
 import connectDB from "@/database/db";
 import styles from "./page.module.css";
 import Portfolio from "@/database/portfolioSchema";
@@ -35,7 +35,7 @@ export default async function PortfolioPage() {
         </div>
         
         <p>No Portfolio Posts Available. Please Check Back Later.</p>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     );
   }
@@ -59,7 +59,7 @@ export default async function PortfolioPage() {
           ))}
         </section>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

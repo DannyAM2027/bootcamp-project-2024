@@ -50,7 +50,10 @@ export default function Contact() {
 
   return (
     <div>
-      <h1 className={styles.pageTitle}>Contact</h1>
+      <div className={styles.pageTitle}>
+          <h1 >Contact Me</h1>
+      </div>
+      
       <form className={styles.contactForm} id="contact-form" autoComplete="off" onSubmit={handleSubmit}>
         <label className={styles.label} htmlFor="name">Name:</label>
         <input
